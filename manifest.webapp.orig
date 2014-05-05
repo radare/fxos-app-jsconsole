@@ -1,0 +1,14 @@
+{
+  "name": "js console",
+  "description": "Javascript Console",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icon128.png",
+    "60": "/icon60.png"
+  },
+  "developer": {
+    "name": "pancake",
+    "url": "http://jsconsole.ffos.lolcathost.org/"
+  },
+  "default_locale": "en"
+}
