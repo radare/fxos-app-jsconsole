@@ -22,7 +22,7 @@ overflow:hidden;
 }
 div,input {
 	font-size:2rem;
-	margin:10px;
+	margin:0px;
 	margin-bottom:0px;
 }
 </style>
@@ -72,6 +72,14 @@ function run() {
 		restorebody(i,o);
 	}
 }
+function save() {
+	var i = document.getElementById ('input').value;
+	localStorage.setItem ("src", i);
+}
+function load() {
+	var i = localStorage.getItem ("src");
+	document.getElementById ('input').value = i;
+}
 </script>
 </head>
 
@@ -79,15 +87,14 @@ function run() {
 <center>
 <input type="button" onclick="run()" value="Run"/>
 <input type="button" onclick="reset()" value="Clear"/>
-<input type="button" onclick="help()" value="Help"/>
+<input type="button" onclick="save()" value="Save" />
+<input type="button" onclick="load()" value="Load" />
+<input type="button" onclick="help()" value="?"/>
 </center>
 <!--
 <input type="button" onclick="reset()" value="Indent" disabled/>
-<input type="button" onclick="reset()" value="Save" disabled/>
-<input type="button" onclick="reset()" value="Load" disabled/>
 <input type="button" onclick="reset()" value="Share" disabled/>
 -->
-<br />
 <textarea autocapitalize="off" autocorrect="off" class="input" id="input">
 // Hello World program
 for (var i = 0; i<3; i++) {
